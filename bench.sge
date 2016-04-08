@@ -1,0 +1,14 @@
+#!/bin/bash
+#$ -V
+#$ -l h_rt=:20:
+#$ -pe mpi 64
+#$ -cwd
+cd src && \
+make clean && \
+make ARCH=px && \
+./MD.out
+./diff-output.out output.dat100 ./reference/output.dat100
+./diff-output.out output.dat200 ./reference/output.dat200
+./diff-output.out output.dat300 ./reference/output.dat300
+./diff-output.out output.dat400 ./reference/output.dat400
+./diff-output.out output.dat500 ./reference/output.dat500

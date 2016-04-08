@@ -1,0 +1,8 @@
+How to compile:
+    make clean && make
+
+How to run code:
+    ./MD.out
+
+How to run tests:
+    ./diff-output.out <output file 1> <output file 2>
